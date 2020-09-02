@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+<div id="login">
+    <h3 class="text-center text-white pt-5">Login form</h3>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-10">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <h3 class="text-center text-info"> What are the colors in the Indian National Flag</h3>
+                        <div class="radio">
+                            <label><input type="checkbox" name="flag[]" checked>Sachin Tendular</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="checkbox" name="flag[]">Virat Kohli</label>
+                        </div>
+                        <div class="radio disabled">
+                            <label><input type="checkbox" name="flag[]" disabled>Adam Gillchris</label>
+                        </div>
+                        <div class="radio disabled">
+                            <label><input type="checkbox" name="flag[]" disabled>Adam Gillchris</label>
+                        </div>
+                              <div class="form-group radio">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Next">
+                            </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

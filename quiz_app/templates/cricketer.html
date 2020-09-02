@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+
+</style>
+<div class="container">
+<div id="login">
+    <h3 class="text-center text-white pt-5">Login form</h3>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <h3 class="text-center text-info">Who is Wolrds Best Cricketer ?</h3>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked>Sachin Tendular</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Virat Kohli</label>
+                        </div>
+                        <div class="radio disabled">
+                            <label><input type="radio" name="optradio" disabled>Adam Gillchris</label>
+                        </div>
+                        <div class="radio disabled">
+                            <label><input type="radio" name="optradio" disabled>Adam Gillchris</label>
+                        </div>
+                              <div class="form-group radio">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Next">
+                            </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
